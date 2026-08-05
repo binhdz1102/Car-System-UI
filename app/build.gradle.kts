@@ -3,7 +3,6 @@ import java.util.Properties
 
 plugins {
     id("systemui.android.application")
-    id("systemui.android.navigation.compose")
     id("systemui.android.hilt")
 }
 
@@ -82,11 +81,29 @@ tasks.register<Exec>("replaceSystemApp") {
 }
 
 dependencies {
+    implementation(project(":core:common"))
+    implementation(project(":core:platform"))
+    implementation(project(":feature:climate:data"))
+    implementation(project(":feature:climate:domain"))
+    implementation(project(":feature:climate:presentation"))
+    implementation(project(":feature:launcher:data"))
+    implementation(project(":feature:launcher:domain"))
+    implementation(project(":feature:launcher:presentation"))
+    implementation(project(":feature:notifications:data"))
+    implementation(project(":feature:notifications:domain"))
+    implementation(project(":feature:notifications:presentation"))
+    implementation(project(":feature:systembar:data"))
+    implementation(project(":feature:systembar:domain"))
+    implementation(project(":feature:systembar:presentation"))
+
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.material)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.timber)
 
     testImplementation(libs.junit)

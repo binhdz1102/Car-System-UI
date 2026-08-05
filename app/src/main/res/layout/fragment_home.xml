@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF202427"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="32dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car-System-UI"
+            android:textColor="#FFF1F3F4"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="XML / Clean Architecture / MVVM replacement\nfor the AOSP Automotive SystemUI surface"
+            android:textColor="#FFB9C0C5"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/home_open_climate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Open climate diagnostics" />
+        <Button
+            android:id="@+id/home_open_launcher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open launcher diagnostics" />
+        <Button
+            android:id="@+id/home_open_task_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open TaskView test" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="The system bars are created by SystemUIService with the AOSP window types 2041, 2024 and 2008.\n\nUse the top and bottom bars on the emulator to verify quick controls, notifications, HVAC, app grid, My-System-App, settings, phone and assistant actions."
+            android:textColor="#FFB9C0C5"
+            android:textSize="15sp" />
+    </LinearLayout>
+</ScrollView>

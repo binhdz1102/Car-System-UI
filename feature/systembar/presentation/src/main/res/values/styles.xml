@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SystemBarButton" parent="@android:style/Widget.Material.ImageButton">
+        <item name="android:layout_width">@dimen/systembar_button_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/systembar_button_background</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:tint">@color/systembar_icon</item>
+    </style>
+    <style name="SystemBarQuickButton" parent="@android:style/Widget.Material.ImageButton">
+        <item name="android:layout_width">@dimen/systembar_quick_button_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/systembar_button_background</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:tint">@color/systembar_icon</item>
+    </style>
+</resources>

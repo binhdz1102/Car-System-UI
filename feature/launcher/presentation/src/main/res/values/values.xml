@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="launcher_surface">#FF202427</color>
+    <color name="launcher_card">#FF2D3337</color>
+    <color name="launcher_text">#FFF1F3F4</color>
+    <color name="launcher_secondary_text">#FFB9C0C5</color>
+    <color name="launcher_accent">#FF9DCEFA</color>
+    <dimen name="launcher_padding">24dp</dimen>
+    <dimen name="launcher_card_padding">16dp</dimen>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/systembar_panel" />
+    <corners android:radius="28dp" />
+    <padding
+        android:left="@dimen/systembar_panel_padding"
+        android:top="@dimen/systembar_panel_padding"
+        android:right="@dimen/systembar_panel_padding"
+        android:bottom="@dimen/systembar_panel_padding" />
+</shape>

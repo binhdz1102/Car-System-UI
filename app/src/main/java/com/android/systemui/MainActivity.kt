@@ -2,32 +2,33 @@ package com.android.systemui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import com.android.systemui.ui.theme.SystemUiTheme
+import android.os.Process
+import androidx.fragment.app.FragmentActivity
+import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
-/** Visible entry point so Android Studio can run the replacement directly. */
-class MainActivity : ComponentActivity() {
+/** XML/navigation entry point used by Android Studio and by manual feature verification. */
+@AndroidEntryPoint
+class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        startService(Intent(this, SystemUIService::class.java))
-        setContent {
-            SystemUiTheme {
-                Column(
-                    modifier = Modifier.fillMaxSize(),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center,
-                ) {
-                    Text("Custom SystemUI")
-                    Text("Gradle replacement is running")
-                }
+        setContentView(R.layout.activity_main)
+        // The persistent service is boot-started for the system user. A diagnostic activity can
+        // also be launched under the foreground driver user; do not create a second bar service
+        // in that per-user process.
+        if (Process.myUid() < PER_USER_UID_RANGE) {
+            runCatching {
+                startService(Intent(this, SystemUIService::class.java))
+            }.onFailure {
+                // A persistent system package may also be started by system_server; the activity
+                // remains useful on a regular debuggable install if the service start is restricted.
+                Timber.tag(TAG).w(it, "Unable to start SystemUI service from activity")
             }
         }
+    }
+
+    private companion object {
+        const val TAG = "CarSystemUI.MainActivity"
+        const val PER_USER_UID_RANGE = 100_000
     }
 }

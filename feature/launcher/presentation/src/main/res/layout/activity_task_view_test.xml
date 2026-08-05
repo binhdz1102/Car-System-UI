@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF101214"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/task_view_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connecting to CarTaskViewController…"
+        android:textColor="#FFF1F3F4"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:id="@+id/task_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="#FF000000" />
+</LinearLayout>

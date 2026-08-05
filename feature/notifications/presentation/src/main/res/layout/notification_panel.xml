@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notification_panel_root"
+    android:layout_width="@dimen/notification_panel_width"
+    android:layout_height="@dimen/notification_panel_height"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/notification_panel_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Notifications"
+            android:textColor="@color/notification_panel_text"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/notification_clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear all" />
+        <ImageButton
+            android:id="@+id/notification_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Close notifications"
+            android:src="@drawable/notification_close"
+            android:tint="@color/notification_panel_text"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/notification_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="No active notifications"
+        android:textColor="@color/notification_panel_secondary"
+        android:textSize="18sp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notification_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
+</LinearLayout>
