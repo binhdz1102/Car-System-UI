@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/system_bar_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/systembar_background"
+    android:layoutDirection="ltr">
+
+    <LinearLayout
+        android:id="@+id/system_bar_quick_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/quick_bluetooth"
+            style="@style/SystemBarQuickButton"
+            android:contentDescription="Bluetooth"
+            android:src="@drawable/systembar_bluetooth" />
+        <ImageButton
+            android:id="@+id/quick_connectivity"
+            style="@style/SystemBarQuickButton"
+            android:contentDescription="Connectivity"
+            android:src="@drawable/systembar_wifi" />
+        <ImageButton
+            android:id="@+id/quick_display"
+            style="@style/SystemBarQuickButton"
+            android:contentDescription="Display"
+            android:src="@drawable/systembar_display" />
+        <ImageButton
+            android:id="@+id/quick_volume"
+            style="@style/SystemBarQuickButton"
+            android:contentDescription="Volume"
+            android:src="@drawable/systembar_volume" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/system_bar_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/systembar_text"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/system_bar_status_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/system_bar_location"
+            style="@style/SystemBarQuickButton"
+            android:contentDescription="Location"
+            android:src="@drawable/systembar_location" />
+        <FrameLayout
+            android:layout_width="@dimen/systembar_quick_button_width"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/system_bar_notifications"
+                style="@style/SystemBarQuickButton"
+                android:contentDescription="Notifications"
+                android:src="@drawable/systembar_notifications" />
+            <TextView
+                android:id="@+id/system_bar_notification_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="top|end"
+                android:background="@drawable/systembar_button_selected"
+                android:gravity="center"
+                android:textColor="@color/systembar_text"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/system_bar_user"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/systembar_button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="User"
+                android:src="@drawable/systembar_user" />
+            <TextView
+                android:id="@+id/system_bar_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:textColor="@color/systembar_text"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

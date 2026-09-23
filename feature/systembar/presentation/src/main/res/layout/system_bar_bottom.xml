@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/system_bar_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/systembar_background"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp">
+
+    <ImageButton
+        android:id="@+id/bottom_home"
+        style="@style/SystemBarButton"
+        android:contentDescription="Home"
+        android:src="@drawable/systembar_home" />
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+    <include
+        android:id="@+id/bottom_driver_climate"
+        layout="@layout/system_bar_climate_control" />
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+    <LinearLayout
+        android:id="@+id/bottom_center_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/bottom_app_grid"
+            style="@style/SystemBarButton"
+            android:contentDescription="Applications"
+            android:src="@drawable/systembar_apps" />
+        <ImageButton
+            android:id="@+id/bottom_my_system_app"
+            style="@style/SystemBarButton"
+            android:contentDescription="MySystemApp"
+            android:src="@drawable/systembar_mysystem" />
+        <ImageButton
+            android:id="@+id/bottom_settings"
+            style="@style/SystemBarButton"
+            android:contentDescription="Settings"
+            android:src="@drawable/systembar_settings" />
+        <ImageButton
+            android:id="@+id/bottom_phone"
+            style="@style/SystemBarButton"
+            android:contentDescription="Phone"
+            android:src="@drawable/systembar_phone" />
+    </LinearLayout>
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+    <include
+        android:id="@+id/bottom_passenger_climate"
+        layout="@layout/system_bar_climate_control" />
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+    <ImageButton
+        android:id="@+id/bottom_assistant"
+        style="@style/SystemBarButton"
+        android:contentDescription="Assistant"
+        android:src="@drawable/systembar_assistant" />
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.android.systemui.HomeFragment"
+        android:label="Car-System-UI">
+        <action
+            android:id="@+id/action_home_to_climate"
+            app:destination="@id/climateFragment" />
+        <action
+            android:id="@+id/action_home_to_launcher"
+            app:destination="@id/launcherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/climateFragment"
+        android:name="com.android.systemui.feature.climate.presentation.ClimateFragment"
+        android:label="Climate" />
+    <fragment
+        android:id="@+id/launcherFragment"
+        android:name="com.android.systemui.feature.launcher.presentation.LauncherFragment"
+        android:label="Launcher" />
+</navigation>

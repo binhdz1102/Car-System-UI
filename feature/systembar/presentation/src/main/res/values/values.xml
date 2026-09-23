@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="systembar_surface">#FF171C1F</color>
+    <color name="systembar_surface_selected">#FF303B42</color>
+    <color name="systembar_surface_pressed">#FF45535B</color>
+    <color name="systembar_panel">#FF202427</color>
+    <color name="systembar_icon">#FFD7DDE1</color>
+    <color name="systembar_icon_selected">#FF9DCEFA</color>
+    <color name="systembar_text">#FFF1F3F4</color>
+    <color name="systembar_secondary_text">#FFB9C0C5</color>
+    <color name="systembar_accent">#FF9DCEFA</color>
+    <color name="systembar_panel_dim">#99000000</color>
+    <dimen name="systembar_top_fallback_height">48dp</dimen>
+    <dimen name="systembar_bottom_fallback_height">64dp</dimen>
+    <dimen name="systembar_button_width">64dp</dimen>
+    <dimen name="systembar_quick_button_width">56dp</dimen>
+    <dimen name="systembar_icon_size">32dp</dimen>
+    <dimen name="systembar_panel_width">500dp</dimen>
+    <dimen name="systembar_panel_height">400dp</dimen>
+    <dimen name="systembar_panel_padding">24dp</dimen>
+</resources>

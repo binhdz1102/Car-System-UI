@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="climate_panel_background">#FF171C1F</color>
+    <color name="climate_panel_text">#FFD8DDE1</color>
+    <color name="climate_panel_secondary">#FFB9C1C7</color>
+    <color name="climate_panel_accent">#FF8BC8F2</color>
+    <color name="climate_panel_track">#FF3D4A52</color>
+    <dimen name="climate_panel_width">500dp</dimen>
+    <dimen name="climate_panel_height">400dp</dimen>
+</resources>
